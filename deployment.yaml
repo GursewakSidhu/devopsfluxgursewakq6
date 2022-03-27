@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gursewakq2app
+spec:
+  replicas: 3
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: gursewakq2app
+  template:
+    metadata:
+      labels:
+        app: gursewakq2app
+    spec:
+      containers:
+      - name: gursewakq2app
+        image: gursewaksingh6516/q2:latest
+        ports:
+        - containerPort: 8080
+
+
